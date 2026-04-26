@@ -1,0 +1,45 @@
+/* UpcomingEvents.css File */
+
+.events-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.event-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.date-box {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background: #eeedfe;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.date-box span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #534ab7;
+}
+
+.date-box p {
+  font-size: 10px;
+  color: #7f77dd;
+}
+
+.event-item .title {
+  font-size: 13px;
+}
+
+.event-item span {
+  font-size: 11px;
+  color: gray;
+}
