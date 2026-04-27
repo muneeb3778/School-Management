@@ -1,4 +1,4 @@
-import "../styles/UpcomingEvents.css";
+import "../../styles/DashboardComponentsStyles/UpcomingEvents.css";
 
 const data = [
   { date: "26 APR", title: "PTM — Class 10 & 11", sub: "Parent-teacher meeting" },

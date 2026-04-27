@@ -1,11 +1,11 @@
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
-import StatsCard from "../components/StatsCard";
-import RecentActivity from "../components/RecentActivity";
-import FeeList from "../components/FeeList";
-import AttendanceByClass from "../components/AttendanceByClass";
-import QuickActions from "../components/QuickActions";
-import UpcomingEvents from "../components/UpcomingEvents";
+import StatsCard from "../components/DashboardComponents/StatsCard";
+import RecentActivity from "../components/DashboardComponents/RecentActivity";
+import FeeList from "../components/DashboardComponents/FeeList";
+import AttendanceByClass from "../components/DashboardComponents/AttendanceByClass";
+import QuickActions from "../components/DashboardComponents/QuickActions";
+import UpcomingEvents from "../components/DashboardComponents/UpcomingEvents";
 
 import "../styles/dashboard.css";
 
@@ -15,7 +15,7 @@ export default function Dashboard() {
             <Sidebar />
 
             <div className="main">
-                <Topbar />
+                <Topbar type="dashboard" />
 
                 <div className="content">
 

@@ -1,4 +1,4 @@
-import "../styles/QuickActions.css";
+import "../../styles/DashboardComponentsStyles/QuickActions.css";
 
 import { UserPlus, Wallet, CalendarCheck, Send } from "lucide-react";
 

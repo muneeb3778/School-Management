@@ -1,4 +1,4 @@
-import "../styles/feeList.css";
+import "../../styles/DashboardComponentsStyles/feeList.css";
 
 const data = [
   { name: "Arjun Nair", class: "Class 10A", amount: "₹12,500", status: "Paid", initials: "AN" },

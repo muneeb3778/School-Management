@@ -1,4 +1,4 @@
-import "../styles/StatsCard.css";
+import "../../styles/DashboardComponentsStyles/StatsCard.css";
 import {
   Users,
   BarChart3,

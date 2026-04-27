@@ -1,4 +1,4 @@
-import "../styles/Attendance.css";
+import "../../styles/DashboardComponentsStyles/Attendance.css";
 
 const data = [
   { class: "Class 10", percent: 96, color: "green" },

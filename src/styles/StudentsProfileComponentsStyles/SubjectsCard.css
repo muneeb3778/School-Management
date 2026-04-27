@@ -1,0 +1,15 @@
+/* SubjectsCard.css file */
+
+.subject {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.subject span {
+  background: #e0f5ec;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}

@@ -1,4 +1,4 @@
-import "../styles/RecentActivity.css";
+import "../../styles/DashboardComponentsStyles/RecentActivity.css";
 
 const data = [
   { text: "Fee paid — Rahul Sharma", time: "10 min ago", color: "green" },
