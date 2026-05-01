@@ -26,7 +26,9 @@ export default function Topbar({
 
   const handleBack = () => {
     if (onBack) return onBack();
-    navigate("/students"); // profile se students list
+    
+    // ✅ FIX: Use replace: true for clean navigation
+    navigate("/students", { replace: true });
   };
 
   return (

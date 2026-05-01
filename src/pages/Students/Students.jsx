@@ -46,6 +46,13 @@ export default function Students() {
     });
   }, [query, chip]);
 
+
+  // ✅ FIX HERE: Navigate with replace: true to avoid history buildup
+  const goToProfile = (studentId) => {
+    navigate(`/students/${studentId}`, { replace: true });
+  };
+
+
   return (
     <div className={styles.studentsLayout}>
       <Sidebar />
@@ -151,7 +158,7 @@ export default function Students() {
                 className={styles.tableRow}
                 role="button"
                 tabIndex={0}
-                onClick={() => navigate(`/students/${s.id}`)}
+                 onClick={() => goToProfile(s.id)}
                 onKeyDown={(e) => e.key === "Enter" && navigate(`/students/${s.id}`)}
               >
                 <div className={styles.studentCell}>
