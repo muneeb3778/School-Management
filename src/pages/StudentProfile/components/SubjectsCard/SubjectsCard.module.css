@@ -1,0 +1,29 @@
+.subject {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.subject:last-child {
+  border-bottom: none;
+}
+
+.subjectName {
+  margin: 0;
+  font-size: 13px;
+}
+
+.teacher {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.grade {
+  background: #e0f5ec;
+  color: #1d9e75;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}

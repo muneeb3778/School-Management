@@ -1,3 +1,5 @@
+/* src/styles/global.css */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,40 +11,16 @@ body {
   background: #f8f8ff;
 }
 
+/* Shared reusable UI */
 .card {
   background: #fff;
   padding: 20px;
   border-radius: 14px;
   border: 1px solid #e8e6f8;
-  transition: 0.3s;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
   transform: translateY(-3px);
-}
-
-/* COLORS */
-.card.purple {
-  border-left: 5px solid #7f77dd;
-}
-
-.card.green {
-  border-left: 5px solid #1d9e75;
-}
-
-.card.yellow {
-  border-left: 5px solid #ef9f27;
-}
-
-.card.red {
-  border-left: 5px solid #e24b4a;
-}
-
-.card p {
-  font-size: 12px;
-  color: gray;
-}
-
-.card h2 {
-  margin-top: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
 }

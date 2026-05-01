@@ -1,0 +1,161 @@
+/* src/components/Sidebar/Sidebar.module.css */
+
+.sidebar {
+  width: 230px;
+  background: #eeedfe;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e0def7;
+  transition: width 0.15s ease;
+}
+
+/* COLLAPSED */
+.collapsed {
+  width: 80px;
+}
+
+.top {
+  flex: 1;
+}
+
+/* LOGO */
+.logoArea h2 {
+  font-size: 18px;
+  color: #3c3489;
+}
+
+.logoArea p {
+  font-size: 12px;
+  color: #7f77dd;
+  margin-bottom: 15px;
+}
+
+/* SECTIONS */
+.navSection {
+  margin-top: 15px;
+}
+
+.sectionTitle {
+  font-size: 10px;
+  color: #8a86d8;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+/* NAV ITEM */
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  margin-bottom: 6px;
+  color: #4b44b3;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.navItem:hover {
+  background: #dcd9fb;
+}
+
+.active {
+  background: #5a52c9;
+  color: white;
+}
+
+.navItem svg {
+  min-width: 18px;
+  stroke-width: 2;
+  color: #6d67d9;
+  transition: transform 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.active svg {
+  color: white;
+}
+
+.navItem:hover svg {
+  transform: scale(1.08);
+}
+
+/* COLLAPSED UI */
+.sidebar.collapsed .navItem {
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.sidebar.collapsed .navItem span {
+  display: none;
+}
+
+/* USER BOX */
+.userBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid #dcd9fb;
+  padding-top: 15px;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #534ab7;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userName {
+  font-size: 13px;
+}
+
+.userRole {
+  font-size: 11px;
+  color: #7f77dd;
+}
+
+/* COLLAPSE BUTTON */
+.collapseBtn {
+  margin-top: 10px;
+  border: none;
+  background: #ddd;
+  padding: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    order: 2;
+    margin-top: 10px;
+    border-right: none;
+    border-top: 1px solid #e0def7;
+  }
+
+  .sidebar.collapsed {
+    width: 100%;
+  }
+
+  .logoArea {
+    display: none;
+  }
+
+  .collapseBtn {
+    display: none;
+  }
+}

@@ -1,0 +1,59 @@
+.eventsCard {}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.headerBtn {
+  background: #eeedfe;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.eventItem {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.eventItem:last-child {
+  border-bottom: none;
+}
+
+.dateBox {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background: #eeedfe;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dateBox span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #534ab7;
+}
+
+.dateBox p {
+  font-size: 10px;
+  color: #7f77dd;
+}
+
+.title {
+  font-size: 13px;
+}
+
+.sub {
+  font-size: 11px;
+  color: gray;
+}

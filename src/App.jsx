@@ -1,8 +1,10 @@
-// App.jsx
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
-import StudentProfile from "./pages/StudentProfile";
-import Academics from "./pages/Academics";
+
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Students from "./pages/Students/Students";
+import StudentProfile from "./pages/StudentProfile/StudentProfile";
+import Academics from "./pages/Academics/Academics";
+
 import { AppProvider } from "./context/Contextapi";
 
 function App() {
@@ -11,8 +13,14 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="/student" element={<StudentProfile />} />
-          <Route path="/Academics" element={<Academics />} />
+
+          {/* Students list page (pehle ye khulega) */}
+          <Route path="/students" element={<Students />} />
+
+          {/* Particular student profile */}
+          <Route path="/students/:studentId" element={<StudentProfile />} />
+
+          <Route path="/academics" element={<Academics />} />
         </Routes>
       </BrowserRouter>
     </AppProvider>

@@ -1,0 +1,65 @@
+.activityCard {}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.headerBtn {
+  background: #eeedfe;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.activityItem {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.activityItem:last-child {
+  border-bottom: none;
+}
+
+.iconBox {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* COLOR SYSTEM */
+.green { background: #e6fbf3; }
+.green .dot { background: #1d9e75; }
+
+.blue { background: #eeedfe; }
+.blue .dot { background: #534ab7; }
+
+.orange { background: #fff3e0; }
+.orange .dot { background: #f4a62a; }
+
+.red { background: #ffecec; }
+.red .dot { background: #e14c4c; }
+
+.text {
+  font-size: 13px;
+}
+
+.time {
+  font-size: 11px;
+  color: gray;
+}

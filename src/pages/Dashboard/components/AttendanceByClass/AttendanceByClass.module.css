@@ -1,0 +1,54 @@
+.attendanceCard {
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.headerBtn {
+  background: #eeedfe;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.attendanceRow {
+  display: grid;
+  grid-template-columns: 80px 1fr 44px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.className {
+  font-size: 13px;
+}
+
+.percent {
+  font-size: 12px;
+  color: #6b7280;
+  text-align: right;
+}
+
+.bar {
+  height: 6px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.green { background: #1d9e75; }
+.orange { background: #f4a62a; }
+.red { background: #e14c4c; }

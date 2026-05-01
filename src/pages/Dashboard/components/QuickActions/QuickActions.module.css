@@ -1,0 +1,48 @@
+.quickCard {}
+
+.heading {
+  margin-bottom: 15px;
+}
+
+.quickGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.quickItem {
+  padding: 15px;
+  border-radius: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.quickItem:hover {
+  transform: translateY(-3px);
+}
+
+.purple {
+  background: #ecebff;
+  color: #534ab7;
+}
+
+.green {
+  background: #e4f7ef;
+  color: #1d9e75;
+}
+
+.yellow {
+  background: #fff4e1;
+  color: #f4a62a;
+}
+
+.red {
+  background: #fdeaea;
+  color: #e14c4c;
+}
+
+.quickItem p {
+  margin-top: 8px;
+  font-size: 13px;
+}

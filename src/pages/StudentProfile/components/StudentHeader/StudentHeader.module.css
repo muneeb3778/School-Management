@@ -1,0 +1,80 @@
+.studentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.left {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.avatarBig {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #e0ddff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #3c3489;
+}
+
+.name {
+  margin: 0;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #f1f0ff;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.active {
+  background: #d4f6e8;
+  color: #1d9e75;
+}
+
+.right {
+  display: flex;
+  gap: 30px;
+}
+
+.metric h3 {
+  margin: 0;
+}
+
+.metric p {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.paid {
+  color: #1d9e75;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .studentHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .right {
+    width: 100%;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+}

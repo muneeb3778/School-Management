@@ -1,0 +1,63 @@
+/* src/pages/Dashboard/Dashboard.module.css */
+
+.dashboardLayout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #f8f7ff;
+  overflow-y: auto;
+}
+
+.content {
+  padding: 20px;
+}
+
+/* GRID */
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.bottomGrid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr;
+  gap: 16px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .dashboardLayout {
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottomGrid {
+    grid-template-columns: 1fr;
+  }
+}
