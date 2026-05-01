@@ -1,22 +1,68 @@
+/* src/pages/StudentProfile/components/StudentTabs.module.css */
+
 .tabs {
   display: flex;
-  gap: 10px;
-  margin-top: 15px;
+  gap: 8px;
+  margin-top: 20px;
+  padding-bottom: 0;
   overflow-x: auto;
-  padding-bottom: 4px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.tabs::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
 .tabBtn,
 .active {
   border: none;
-  padding: 8px 15px;
+  outline: none;
+  padding: 9px 18px;
   border-radius: 20px;
   background: #f1f0ff;
   cursor: pointer;
   white-space: nowrap;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  transition: all 0.2s ease;
+  min-width: fit-content;
+}
+
+.tabBtn:hover {
+  background: #e9e7ff;
+  color: #5b50d6;
 }
 
 .active {
   background: #5b50d6;
   color: white;
+  box-shadow: 0 2px 8px rgba(91, 80, 214, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tabs {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 6px;
+    margin-top: 15px;
+    padding-bottom: 5px;
+  }
+
+  .tabBtn,
+  .active {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .tabBtn,
+  .active {
+    padding: 7px 12px;
+    font-size: 12px;
+    border-radius: 16px;
+  }
 }

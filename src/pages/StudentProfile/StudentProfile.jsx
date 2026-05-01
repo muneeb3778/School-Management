@@ -1,5 +1,5 @@
 import styles from "./StudentProfile.module.css";
-import { useMemo } from "react";
+import { useMemo , useState} from "react";
 import { useParams } from "react-router-dom";
 
 import Sidebar from "../../components/Sidebar/Sidebar";
@@ -17,6 +17,7 @@ import NotesAndRemarks from "./components/NotesAndRemarks/NotesAndRemarks";
 
 export default function StudentProfile() {
   const { studentId } = useParams();
+  const [activeTab, setActiveTab] = useState("overview"); // Add state
 
   const student = useMemo(
     () => studentsData.find((s) => s.id === studentId),
@@ -49,7 +50,8 @@ export default function StudentProfile() {
         <div className={styles.content}>
           <StudentHeader student={student} />
 
-          <StudentTabs />
+          {/*  Pass activeTab to handle clicks */}
+          <StudentTabs activeTab={activeTab} onTabChange={setActiveTab} />
 
           {/* FIRST GRID ROW */}
           <div className={styles.profileGrid}>
@@ -69,7 +71,7 @@ export default function StudentProfile() {
             <NotesAndRemarks student={student} />
           </div>
 
-          
+
         </div>
       </div>
     </div>
