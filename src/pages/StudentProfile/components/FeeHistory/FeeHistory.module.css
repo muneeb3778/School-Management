@@ -1,0 +1,78 @@
+/* src/pages/StudentProfile/components/FeeHistory/FeeHistory.module.css */
+
+.list {
+  margin-top: 12px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.term {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+  margin: 0;
+}
+
+.date {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.amount {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.statusBadge.paid {
+  background: #d4f6e8;
+  color: #1d9e75;
+}
+
+.statusBadge.due {
+  background: #fde0e0;
+  color: #e14c4c;
+}
+
+.statusBadge.new {
+  background: #eeedfe;
+  color: #534ab7;
+}
+
+.empty {
+  text-align: center;
+  color: #6b7280;
+  font-size: 13px;
+  padding: 20px 0;
+}

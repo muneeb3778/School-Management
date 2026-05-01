@@ -30,6 +30,15 @@
   margin-top: 20px;
 }
 
+
+/* responsive */
+@media (max-width: 1024px) {
+  .profileBottomGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /* MOBILE */
 @media (max-width: 768px) {
   .studentProfileLayout {
@@ -49,3 +58,4 @@
     grid-template-columns: 1fr;
   }
 }
+

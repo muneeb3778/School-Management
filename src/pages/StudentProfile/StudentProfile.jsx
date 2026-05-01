@@ -12,6 +12,8 @@ import PersonalDetails from "./components/PersonalDetails/PersonalDetails";
 import ParentDetails from "./components/ParentDetails/ParentDetails";
 import AttendanceCard from "./components/AttendanceCard/AttendanceCard";
 import SubjectsCard from "./components/SubjectsCard/SubjectsCard";
+import FeeHistory from "./components/FeeHistory/FeeHistory";
+import NotesAndRemarks from "./components/NotesAndRemarks/NotesAndRemarks";
 
 export default function StudentProfile() {
   const { studentId } = useParams();
@@ -49,15 +51,25 @@ export default function StudentProfile() {
 
           <StudentTabs />
 
+          {/* FIRST GRID ROW */}
           <div className={styles.profileGrid}>
             <PersonalDetails student={student} />
             <ParentDetails student={student} />
           </div>
 
+          {/* SECOND GRID ROW */}
           <div className={styles.profileBottomGrid}>
             <AttendanceCard student={student} />
             <SubjectsCard student={student} />
           </div>
+
+          {/* THIRD GRID ROW - NEW */}
+          <div className={styles.profileBottomGrid}>
+            <FeeHistory student={student} />
+            <NotesAndRemarks student={student} />
+          </div>
+
+          
         </div>
       </div>
     </div>

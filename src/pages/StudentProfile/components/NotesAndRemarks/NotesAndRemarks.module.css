@@ -1,0 +1,70 @@
+/* src/pages/StudentProfile/components/NotesAndRemarks/NotesAndRemarks.module.css */
+
+.list {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.item {
+  display: flex;
+  gap: 12px;
+  position: relative;
+}
+
+.item::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 26px;
+  bottom: -14px;
+  width: 1px;
+  background: #e9e7ff;
+}
+
+.item:last-child::before {
+  display: none;
+}
+
+.icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.content {
+  flex: 1;
+}
+
+.text {
+  font-size: 13px;
+  color: #1f2937;
+  line-height: 1.5;
+  margin: 0 0 6px 0;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.date,
+.author {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.dot {
+  color: #6b7280;
+}
+
+.empty {
+  text-align: center;
+  color: #6b7280;
+  font-size: 13px;
+  padding: 20px 0;
+}

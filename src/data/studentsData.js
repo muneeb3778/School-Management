@@ -32,6 +32,16 @@ export const studentsData = [
       { week: "Week 2", percent: 80 },
       { week: "Week 3", percent: 100 },
       { week: "Week 4", percent: 100 }
+    ],
+    feeHistory: [
+      { term: "Term 1 – 2025–26", amount: "₹12,500", date: "Paid on 12 Apr 2025", status: "Paid" },
+      { term: "Term 2 – 2024–25", amount: "₹12,500", date: "Paid on 10 Jan 2025", status: "Paid" },
+      { term: "Term 1 – 2024–25", amount: "₹11,000", date: "Paid on 8 Jun 2024", status: "Paid" }
+    ],
+    notesAndRemarks: [
+      { iconColor: "#6d67d9", text: "Excellent performance in Science Olympiad — district rank 3.", date: "15 Mar 2026", author: "Ms. Sharma" },
+      { iconColor: "#e14c4c", text: "Missed 2 days — medical leave, documents submitted.", date: "3 Feb 2026", author: "Admin" },
+      { iconColor: "#1d9e75", text: "School captain elected for academic year 2025–26.", date: "10 Jun 2025", author: "Principal" }
     ]
   },
   {
@@ -65,6 +75,15 @@ export const studentsData = [
       { week: "Week 2", percent: 100 },
       { week: "Week 3", percent: 90 },
       { week: "Week 4", percent: 100 }
+    ],
+    feeHistory: [
+      { term: "Term 1 – 2025–26", amount: "₹10,000", date: "Paid on 15 Mar 2025", status: "Paid" },
+      { term: "Term 2 – 2024–25", amount: "₹10,000", date: "Paid on 12 Jan 2025", status: "Paid" },
+      { term: "Term 1 – 2024–25", amount: "₹9,500", date: "Paid on 5 Jul 2024", status: "Paid" }
+    ],
+    notesAndRemarks: [
+      { iconColor: "#1d9e75", text: "Participated in inter-school art competition.", date: "20 Feb 2026", author: "Ms. Patel" },
+      { iconColor: "#6d67d9", text: "Good improvement in Mathematics.", date: "10 Jan 2026", author: "Mr. Verma" }
     ]
   },
   {
@@ -98,6 +117,16 @@ export const studentsData = [
       { week: "Week 2", percent: 80 },
       { week: "Week 3", percent: 90 },
       { week: "Week 4", percent: 70 }
+    ],
+    feeHistory: [
+      { term: "Term 1 – 2025–26", amount: "₹11,000", date: "Pending", status: "Due" },
+      { term: "Term 2 – 2024–25", amount: "₹11,000", date: "Paid on 18 Feb 2025", status: "Paid" },
+      { term: "Term 1 – 2024–25", amount: "₹10,500", date: "Paid on 10 May 2024", status: "Paid" }
+    ],
+    notesAndRemarks: [
+      { iconColor: "#e14c4c", text: "Multiple absences noticed this month.", date: "25 Feb 2026", author: "Admin" },
+      { iconColor: "#f59e0b", text: "Needs extra support in Mathematics.", date: "15 Jan 2026", author: "Mr. Verma" },
+      { iconColor: "#1d9e75", text: "Improved participation in sports activities.", date: "5 Dec 2025", author: "Coach Singh" }
     ]
   },
   {
@@ -131,6 +160,15 @@ export const studentsData = [
       { week: "Week 2", percent: 100 },
       { week: "Week 3", percent: 80 },
       { week: "Week 4", percent: 90 }
+    ],
+    feeHistory: [
+      { term: "Term 1 – 2025–26", amount: "₹15,000", date: "Pending", status: "Due" },
+      { term: "Term 2 – 2024–25", amount: "₹14,500", date: "Paid on 20 Mar 2025", status: "Paid" },
+      { term: "Term 1 – 2024–25", amount: "₹14,000", date: "Paid on 5 Jun 2024", status: "Paid" }
+    ],
+    notesAndRemarks: [
+      { iconColor: "#1d9e75", text: "Consistently top performer in science subjects.", date: "28 Feb 2026", author: "Dr. Menon" },
+      { iconColor: "#6d67d9", text: "Selected for state-level olympiad training.", date: "10 Feb 2026", author: "Principal" }
     ]
   },
   {
@@ -164,6 +202,15 @@ export const studentsData = [
       { week: "Week 2", percent: 100 },
       { week: "Week 3", percent: 90 },
       { week: "Week 4", percent: 90 }
+    ],
+    feeHistory: [
+      { term: "Term 1 – 2025–26", amount: "₹13,000", date: "Paid on 20 Mar 2025", status: "Paid" },
+      { term: "Term 2 – 2024–25", amount: "₹12,500", date: "Paid on 15 Jan 2025", status: "Paid" },
+      { term: "Term 1 – 2024–25", amount: "₹12,000", date: "Paid on 8 Jul 2024", status: "Paid" }
+    ],
+    notesAndRemarks: [
+      { iconColor: "#6d67d9", text: "Won first prize in school music competition.", date: "15 Mar 2026", author: "Mr. Joshi" },
+      { iconColor: "#1d9e75", text: "Very good leadership qualities.", date: "1 Mar 2026", author: "Principal" }
     ]
   },
   {
@@ -197,6 +244,14 @@ export const studentsData = [
       { week: "Week 2", percent: 100 },
       { week: "Week 3", percent: 100 },
       { week: "Week 4", percent: 100 }
+    ],
+    feeHistory: [
+      { term: "Term 1 – 2025–26", amount: "₹8,000", date: "Pending", status: "New" },
+      { term: "Admission Fee", amount: "₹5,000", date: "Paid on 5 Aug 2024", status: "Paid" }
+    ],
+    notesAndRemarks: [
+      { iconColor: "#6d67d9", text: "New admission — orientation completed successfully.", date: "10 Aug 2024", author: "Admin" },
+      { iconColor: "#1d9e75", text: "Well adjusted in classroom.", date: "15 Sep 2024", author: "Class Teacher" }
     ]
   },
   {
@@ -230,6 +285,15 @@ export const studentsData = [
       { week: "Week 2", percent: 100 },
       { week: "Week 3", percent: 90 },
       { week: "Week 4", percent: 90 }
+    ],
+    feeHistory: [
+      { term: "Term 1 – 2025–26", amount: "₹16,000", date: "Paid on 25 Mar 2025", status: "Paid" },
+      { term: "Term 2 – 2024–25", amount: "₹15,500", date: "Paid on 18 Jan 2025", status: "Paid" },
+      { term: "Term 1 – 2024–25", amount: "₹15,000", date: "Paid on 10 Jun 2024", status: "Paid" }
+    ],
+    notesAndRemarks: [
+      { iconColor: "#1d9e75", text: "Preparing well for board examinations.", date: "5 Mar 2026", author: "Mr. Bose" },
+      { iconColor: "#6d67d9", text: "Career counseling session scheduled.", date: "20 Feb 2026", author: "Counselor" }
     ]
   }
 ];
