@@ -1,5 +1,6 @@
 // src/pages/Dashboard/Dashboard.jsx
 import styles from "./Dashboard.module.css";
+import { useState } from "react";
 
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Topbar from "../../components/Topbar/Topbar";
@@ -12,15 +13,19 @@ import QuickActions from "./components/QuickActions/QuickActions";
 import UpcomingEvents from "./components/UpcomingEvents/UpcomingEvents";
 
 export default function Dashboard() {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
   return (
     <div className={styles.dashboardLayout}>
-      <Sidebar />
+      <Sidebar isOpen={drawerOpen} onClose={() => setDrawerOpen(false)} />
 
       <div className={styles.main}>
-        <Topbar type="dashboard" />
+        <Topbar
+          type="dashboard"
+          onMenuClick={() => setDrawerOpen(true)}
+        />
 
         <div className={styles.content}>
-          {/* TOP STATS */}
           <div className={styles.statGrid}>
             <StatsCard title="Total students" value="1248" color="purple" sub="+34 this term" />
             <StatsCard title="Today's attendance" value="91%" color="green" sub="87 absent" />
@@ -28,13 +33,11 @@ export default function Dashboard() {
             <StatsCard title="Dues pending" value="₹1.2L" color="red" sub="42 students" />
           </div>
 
-          {/* MAIN GRID */}
           <div className={styles.mainGrid}>
             <FeeList />
             <RecentActivity />
           </div>
 
-          {/* BOTTOM */}
           <div className={styles.bottomGrid}>
             <AttendanceByClass />
             <QuickActions />

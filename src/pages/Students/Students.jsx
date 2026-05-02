@@ -18,6 +18,7 @@ function initials(name) {
 export default function Students() {
   const navigate = useNavigate();
 
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [chip, setChip] = useState("All"); // All | Active | Fee due | New
 
@@ -49,19 +50,20 @@ export default function Students() {
 
   // ✅ FIX HERE: Navigate with replace: true to avoid history buildup
   const goToProfile = (studentId) => {
-    navigate(`/students/${studentId}`, { replace: true });
+    navigate(`/students/${studentId}`);
   };
 
 
   return (
     <div className={styles.studentsLayout}>
-      <Sidebar />
+      <Sidebar isOpen={drawerOpen} onClose={() => setDrawerOpen(false)} />
 
       <div className={styles.main}>
         <Topbar
           type="students"
           title="Students"
           subtitle={`${studentsData.length} students enrolled`}
+          onMenuClick={() => setDrawerOpen(true)}
         />
 
         <div className={styles.content}>
@@ -158,8 +160,8 @@ export default function Students() {
                 className={styles.tableRow}
                 role="button"
                 tabIndex={0}
-                 onClick={() => goToProfile(s.id)}
-                onKeyDown={(e) => e.key === "Enter" && navigate(`/students/${s.id}`)}
+                onClick={() => goToProfile(s.id)}
+                onKeyDown={(e) => e.key === "Enter" && goToProfile(s.id)}
               >
                 <div className={styles.studentCell}>
                   <div className={styles.avatar}>{initials(s.name)}</div>
@@ -174,13 +176,12 @@ export default function Students() {
 
                 <div>
                   <span
-                    className={`${styles.badge} ${
-                      s.fee === "Paid"
-                        ? styles.badgePaid
-                        : s.fee === "Due"
-                          ? styles.badgeDue
-                          : styles.badgeNew
-                    }`}
+                    className={`${styles.badge} ${s.fee === "Paid"
+                      ? styles.badgePaid
+                      : s.fee === "Due"
+                        ? styles.badgeDue
+                        : styles.badgeNew
+                      }`}
                   >
                     {s.fee}
                   </span>

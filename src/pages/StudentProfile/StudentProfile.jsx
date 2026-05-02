@@ -1,5 +1,5 @@
 import styles from "./StudentProfile.module.css";
-import { useMemo , useState} from "react";
+import { useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import Sidebar from "../../components/Sidebar/Sidebar";
@@ -18,6 +18,7 @@ import NotesAndRemarks from "./components/NotesAndRemarks/NotesAndRemarks";
 export default function StudentProfile() {
   const { studentId } = useParams();
   const [activeTab, setActiveTab] = useState("overview"); // Add state
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   const student = useMemo(
     () => studentsData.find((s) => s.id === studentId),
@@ -27,9 +28,12 @@ export default function StudentProfile() {
   if (!student) {
     return (
       <div className={styles.studentProfileLayout}>
-        <Sidebar />
+        <Sidebar isOpen={drawerOpen} onClose={() => setDrawerOpen(false)} />
         <div className={styles.main}>
-          <Topbar type="studentProfile" />
+          <Topbar
+            type="studentProfile"
+            onMenuClick={() => setDrawerOpen(true)}
+          />
           <div className={styles.content}>
             <div className="card" style={{ padding: 16 }}>
               <h3>Student not found!</h3>
@@ -43,9 +47,12 @@ export default function StudentProfile() {
 
   return (
     <div className={styles.studentProfileLayout}>
-      <Sidebar />
+      <Sidebar isOpen={drawerOpen} onClose={() => setDrawerOpen(false)} />
       <div className={styles.main}>
-        <Topbar type="studentProfile" />
+        <Topbar
+          type="studentProfile"
+          onMenuClick={() => setDrawerOpen(true)}
+        />
 
         <div className={styles.content}>
           <StudentHeader student={student} />
