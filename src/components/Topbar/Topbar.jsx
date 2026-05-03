@@ -11,6 +11,13 @@ export default function Topbar({
   onAddStudent,
   onBack,
   onMenuClick,
+
+  // ✅ new for academics
+  crumbs,
+  secondaryLabel,
+  onSecondary,
+  primaryLabel,
+  onPrimary,
 }) {
   const location = useLocation();
   const navigate = useNavigate();
@@ -43,7 +50,10 @@ export default function Topbar({
       ? "studentProfile"
       : location.pathname.startsWith("/students")
         ? "students"
-        : "dashboard");
+        : location.pathname.startsWith("/academics")
+          ? "academics"
+          : "dashboard");
+
 
   const handleBack = () => {
     if (onBack) return onBack();
@@ -97,6 +107,18 @@ export default function Topbar({
             <span className={styles.breadcrumb}>Students</span>
           </div>
         )}
+
+
+        {resolvedType === "academics" && (
+          <div className={styles.leftCol}>
+            {crumbs && <p className={styles.crumbs}>{crumbs}</p>}
+            <h3 className={styles.title}>{title ?? "Academics"}</h3>
+            {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
+          </div>
+        )}
+
+
+
       </div>
 
       {/* RIGHT AREA */}
@@ -142,6 +164,23 @@ export default function Topbar({
             </button>
           </>
         )}
+
+
+        {resolvedType === "academics" && (
+          <>
+            {secondaryLabel && (
+              <button type="button" className={styles.outlineBtn} onClick={onSecondary}>
+                {secondaryLabel}
+              </button>
+            )}
+            {primaryLabel && (
+              <button type="button" className={styles.primaryBtn} onClick={onPrimary}>
+                {primaryLabel}
+              </button>
+            )}
+          </>
+        )}
+
       </div>
     </header>
   );

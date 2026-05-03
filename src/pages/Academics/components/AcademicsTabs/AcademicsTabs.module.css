@@ -1,0 +1,28 @@
+.tabs {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  border-bottom: 1px solid #eceafe;
+  padding-bottom: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tabs::-webkit-scrollbar { display: none; }
+
+.tab {
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-size: 14px;
+  padding: 10px 2px;
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+}
+
+.active {
+  color: #5b50d6;
+  border-bottom-color: #5b50d6;
+  font-weight: 600;
+}

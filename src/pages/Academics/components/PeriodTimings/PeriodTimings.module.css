@@ -1,0 +1,139 @@
+.card {
+  margin-top: 14px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #eceafe;
+  background: #fff;
+}
+
+.heading {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.headActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.smallBtn {
+  border: 1px solid #dcdafc;
+  background: #fff;
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 40px 110px 1fr 26px 1fr 70px 90px;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0effa;
+  background: #fff;
+}
+
+.breakRow {
+  background: #faf9f2;
+}
+
+.badge {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  border: 1px solid #dcdafc;
+  background: #f3f1ff;
+  color: #5b50d6;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.timeBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0 10px;
+  height: 44px;
+  background: #fff;
+}
+
+.timeBox input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+  background: transparent;
+}
+
+.arrow {
+  text-align: center;
+  color: #6b7280;
+}
+
+.duration {
+  justify-self: start;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #eeedfe;
+  color: #5b50d6;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.removeBtn {
+  border: 1px solid #fecaca;
+  background: #fff5f5;
+  color: #dc2626;
+  height: 34px;
+  border-radius: 999px;
+  padding: 0 12px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .row {
+    grid-template-columns: 40px 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .labelWrap { grid-column: 2 / -1; }
+  .timeBox:nth-of-type(1) { grid-column: 1 / -1; }
+  .arrow { display: none; }
+  .timeBox:nth-of-type(2) { grid-column: 1 / -1; }
+
+  .duration { grid-column: 1 / 2; }
+  .removeBtn { grid-column: 2 / -1; justify-self: end; }
+}

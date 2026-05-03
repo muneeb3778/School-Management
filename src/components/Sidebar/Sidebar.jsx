@@ -193,7 +193,7 @@ export default function Sidebar({ isOpen = false, onClose = () => {} }) {
           {(!collapsed || isMobile) && (
             <div>
               <p className={styles.userName}>Anita Patel</p>
-              <span className={styles.userRole}>Super Admin</span>
+              <span className={styles.userRole}> Admin</span>
             </div>
           )}
         </div>
