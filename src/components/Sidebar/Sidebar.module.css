@@ -1,8 +1,12 @@
 .sidebar {
   width: 230px;
+  height: 100vh;
   min-height: 100vh;
+  position: sticky;
+  top: 0;
+
   background: #eeedfe;
-  padding: 20px 15px;
+  padding: 14px 12px;
   display: flex;
   flex-direction: column;
   border-right: 1px solid #e0def7;
@@ -10,13 +14,8 @@
   flex-shrink: 0;
   z-index: 1000;
 
-  /* HIDE SCROLLBAR - Keep it scrollable but invisible */
-  overflow-y: auto;
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
-
+  /* desktop pe sidebar scroll nahi hoga */
+  overflow: hidden;
 }
 
 /* Hide Webkit Scrollbar (Chrome, Safari, Opera) */
@@ -33,6 +32,7 @@
 
 .top {
   flex: 1;
+  min-height: 0;
 }
 
 /* LOGO */
@@ -41,18 +41,20 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
+  margin-bottom: 8px;
 }
 
 .logoArea h2 {
-  font-size: 18px;
+  font-size: 16px;
   color: #3c3489;
   margin: 0;
+  line-height: 1.2;
 }
 
 .logoArea p {
-  font-size: 12px;
+  font-size: 11px;
   color: #7f77dd;
-  margin: 5px 0 15px;
+  margin: 4px 0 10px;
 }
 
 /* mobile close hidden desktop */
@@ -62,13 +64,13 @@
 
 /* SECTIONS */
 .navSection {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .sectionTitle {
-  font-size: 10px;
+  font-size: 9px;
   color: #8a86d8;
-  margin-bottom: 8px;
+  margin: 0 0 6px;
   letter-spacing: 1px;
 }
 
@@ -76,13 +78,24 @@
 .navItem {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 12px;
-  border-radius: 12px;
-  margin-bottom: 6px;
+  gap: 9px;
+  padding: 8px 10px;
+  border-radius: 11px;
+  margin-bottom: 4px;
   color: #4b44b3;
   text-decoration: none;
+  font-size: 13px;
   transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.navItem svg {
+  min-width: 17px;
+  width: 17px;
+  height: 17px;
+  stroke-width: 2;
+  color: #6d67d9;
+  transition: transform 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
 }
 
 .navItem:hover {
@@ -94,13 +107,6 @@
   color: white;
 }
 
-.navItem svg {
-  min-width: 18px;
-  stroke-width: 2;
-  color: #6d67d9;
-  transition: transform 0.2s ease, color 0.2s ease;
-  flex-shrink: 0;
-}
 
 .active svg {
   color: white;
@@ -113,7 +119,7 @@
 /* COLLAPSED UI */
 .sidebar.collapsed .navItem {
   justify-content: center;
-  padding: 10px 0;
+  padding: 8px 0;
 }
 
 .sidebar.collapsed .navItem span {
@@ -124,15 +130,16 @@
 .userBox {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 9px;
   border-top: 1px solid #dcd9fb;
-  padding-top: 15px;
-  margin-top: 16px;
+  padding-top: 10px;
+  margin-top: 10px;
+  flex-shrink: 0;
 }
 
 .avatar {
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: #534ab7;
   color: white;
@@ -140,26 +147,30 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  font-size: 12px;
 }
 
 .userName {
-  font-size: 13px;
+  font-size: 12px;
   margin: 0;
 }
 
 .userRole {
-  font-size: 11px;
+  font-size: 10px;
   color: #7f77dd;
 }
 
+
+
 /* COLLAPSE BUTTON */
 .collapseBtn {
-  margin-top: 10px;
+  margin-top: 8px;
   border: none;
   background: #ddd;
-  padding: 6px;
+  padding: 5px;
   border-radius: 8px;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 /* Overlay default desktop hidden */
@@ -167,12 +178,6 @@
   display: none;
 }
 
-/* RESPONSIVE DESKTOP TABLET */
-@media (max-width: 1024px) {
-  .sidebar {
-    width: 190px;
-  }
-}
 
 /* MOBILE DRAWER */
 @media (max-width: 768px) {
@@ -199,15 +204,34 @@
     top: 0;
     left: 0;
     bottom: 0;
+
     width: min(84vw, 320px);
     height: 100dvh;
     min-height: 100dvh;
+
     padding: 22px 18px;
     border-right: 1px solid #dedcff;
     border-top: none;
     box-shadow: 20px 0 45px rgba(17, 24, 39, 0.22);
+
     transform: translateX(-105%);
+
+    /* ✅ Important */
+    box-sizing: border-box;
     overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+
+    /* scrollbar hide */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+    .top {
+    flex: 0 0 auto;
+    min-height: auto;
   }
 
   .sidebar.open {
