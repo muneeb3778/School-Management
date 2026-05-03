@@ -1,0 +1,171 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: #f8f7ff;
+  overflow-y: auto;
+}
+
+.content {
+  padding: 20px;
+}
+
+.formCard {
+  padding: 0;
+  overflow: hidden;
+}
+
+.formLayout {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 18px;
+  padding: 18px;
+}
+
+.photoBox {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.photoInner {
+  width: 140px;
+  height: 140px;
+  border: 2px dashed #d9d6ff;
+  border-radius: 16px;
+  background: #fbfaff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.photoCircle {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #cfcafc;
+}
+
+.photoText {
+  margin: 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.formRight {
+  min-width: 0;
+}
+
+.sectionTitle {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field,
+.fieldFull {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label,
+.fieldFull label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.field input,
+.fieldFull input,
+.field select,
+.fieldFull select {
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #dcdafc;
+  border-radius: 12px;
+  outline: none;
+  background: #fff;
+}
+
+.fieldFull {
+  grid-column: 1 / -1;
+}
+
+.mt8 {
+  margin-top: 8px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #eceafe;
+  margin: 16px 0;
+}
+
+.footerBar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 14px 18px;
+  border-top: 1px solid #eceafe;
+  background: #ffffff;
+  position: sticky;
+  bottom: 0;
+}
+
+.cancelBtn {
+  border: 1px solid #dcdafc;
+  background: #fff;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.submitBtn {
+  border: none;
+  background: #5b50d6;
+  color: #fff;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .formLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .photoBox {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 15px;
+  }
+
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+
+  .footerBar {
+    justify-content: space-between;
+  }
+}

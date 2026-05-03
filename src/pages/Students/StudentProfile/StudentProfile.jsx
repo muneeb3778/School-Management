@@ -1,10 +1,11 @@
 import styles from "./StudentProfile.module.css";
-import { useMemo, useState } from "react";
+import { useContext, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import Sidebar from "../../components/Sidebar/Sidebar";
-import Topbar from "../../components/Topbar/Topbar";
-import { studentsData } from "../../data/studentsData";
+import Sidebar from "../../../components/Sidebar/Sidebar";
+import Topbar from "../../../components/Topbar/Topbar";
+import { AppContext } from "../../../context/Contextapi";
+
 
 import StudentHeader from "./components/StudentHeader/StudentHeader";
 import StudentTabs from "./components/StudentTabs/StudentTabs";
@@ -15,15 +16,18 @@ import SubjectsCard from "./components/SubjectsCard/SubjectsCard";
 import FeeHistory from "./components/FeeHistory/FeeHistory";
 import NotesAndRemarks from "./components/NotesAndRemarks/NotesAndRemarks";
 
+
+
 export default function StudentProfile() {
   const { studentId } = useParams();
   const [activeTab, setActiveTab] = useState("overview"); // Add state
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  const student = useMemo(
-    () => studentsData.find((s) => s.id === studentId),
-    [studentId]
-  );
+const { getStudentById } =useContext(AppContext)
+
+  const student = useMemo(() => getStudentById(studentId), 
+  [getStudentById,studentId]);
+
 
   if (!student) {
     return (

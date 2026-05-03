@@ -1,10 +1,12 @@
 import styles from "./Students.module.css";
-import { useMemo, useState } from "react";
+import { useContext, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Topbar from "../../components/Topbar/Topbar";
-import { studentsData } from "../../data/studentsData";
+import { AppContext } from "../../context/Contextapi";
+
+
 
 function initials(name) {
   return name
@@ -17,6 +19,7 @@ function initials(name) {
 
 export default function Students() {
   const navigate = useNavigate();
+  const {studentsData} = useContext(AppContext)
 
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [query, setQuery] = useState("");
@@ -36,16 +39,16 @@ export default function Students() {
         chip === "All"
           ? true
           : chip === "Fee due"
-            ? s.fee === "Due"
-            : chip === "New"
-              ? s.fee === "New"
-              : chip === "Active"
-                ? s.fee !== "New"
-                : true;
+          ? s.fee === "Due"
+          : chip === "New"
+          ? s.fee === "New"
+          : chip === "Active"
+          ? s.fee !== "New"
+          : true;
 
       return matchesQuery && matchesChip;
     });
-  }, [query, chip]);
+  }, [studentsData, query, chip]);
 
 
   // ✅ FIX HERE: Navigate with replace: true to avoid history buildup
@@ -64,6 +67,8 @@ export default function Students() {
           title="Students"
           subtitle={`${studentsData.length} students enrolled`}
           onMenuClick={() => setDrawerOpen(true)}
+          onAddStudent={() => navigate("/students/new")}
+          onExport={() => {}}
         />
 
         <div className={styles.content}>
@@ -223,3 +228,4 @@ export default function Students() {
     </div>
   );
 }
+
